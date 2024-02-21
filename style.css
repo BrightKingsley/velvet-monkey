@@ -1,0 +1,246 @@
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  background: url("https://assets.sibrata.com/images/codepen/tea-garden-unsplash.jpg")
+    no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.5) 0%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
+  z-index: 1;
+}
+
+#canvas {
+  position: absolute;
+  z-index: 5;
+}
+
+.top-layer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 350px;
+  height: 500px;
+  z-index: 5;
+}
+
+.hero-logo {
+  width: 350px;
+  display: block;
+}
+
+.hero-text {
+  display: block;
+  padding: 20px 0 0 0;
+  width: 100%;
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-style: italic;
+  color: #fff;
+  letter-spacing: 5.3px;
+  text-align: center;
+  line-height: 1.2;
+}
+
+h1 {
+  position: absolute;
+  top: 47%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-family: "Arial";
+  text-transform: uppercase;
+  opacity: 0.2;
+  font-size: 70px;
+}
+
+body {
+  margin: 0;
+  background-color: #1d1e22;
+}
+
+#parallax {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+#parallax .flake {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  z-index: 2;
+}
+/* 
+#flake1 {
+  background-image: url(https://un-po.co.in/i/1.png);
+  background-position: 20% 10%;
+  animation: flake1Animation 5s infinite linear;
+}
+
+#flake2 {
+  background-image: url(https://un-po.co.in/i/2.png);
+  background-position: 80% 10%;
+  animation: flake2Animation 6s infinite linear;
+}
+
+#flake3 {
+  background-image: url(https://un-po.co.in/i/3.png);
+  background-position: 80% 80%;
+  animation: flake3Animation 7s infinite linear;
+}
+
+#flake4 {
+  background-image: url(https://un-po.co.in/i/4.png);
+  background-position: 20% 80%;
+  animation: flake4Animation 8s infinite linear;
+} */
+
+#flake1 {
+  background-image: url(https://un-po.co.in/i/1.png);
+  background-position: 20% 10%;
+  transition: all 1s ease-in-out;
+  animation: flake1animation 5s infinite linear;
+}
+
+#flake2 {
+  background-image: url(https://un-po.co.in/i/2.png);
+  background-position: 80% 10%;
+  transition: all 1s ease-in-out;
+  animation: flake2animation 6s infinite linear;
+}
+
+#flake3 {
+  background-image: url(https://un-po.co.in/i/3.png);
+  background-position: 80% 80%;
+  transition: all 1s ease-in-out;
+  animation: flake3animation 7s infinite linear;
+}
+
+#flake4 {
+  background-image: url(https://un-po.co.in/i/4.png);
+  background-position: 20% 80%;
+  transition: all 1s ease-in-out;
+  animation: flake4animation 8s infinite linear;
+}
+
+h1 {
+  position: absolute;
+  top: 47%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-family: "Arial";
+  text-transform: uppercase;
+  opacity: 0.2;
+  font-size: 70px;
+}
+
+@keyframes flake1Animation {
+  0% {
+    transform: translate(0, 0);
+  }
+  33% {
+    transform: translate(10px, 5px);
+  }
+  66% {
+    transform: translate(-5px, 10px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes flake2Animation {
+  0% {
+    transform: translate(0, 0);
+  }
+  33% {
+    transform: translate(-8px, 4px);
+  }
+  66% {
+    transform: translate(4px, -8px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes flake3Animation {
+  0% {
+    transform: translate(0, 0);
+  }
+  33% {
+    transform: translate(6px, -3px);
+  }
+  66% {
+    transform: translate(-3px, -6px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes flake4Animation {
+  0% {
+    transform: translate(0, 0);
+  }
+  33% {
+    transform: translate(-15px, 7.5px);
+  }
+  66% {
+    transform: translate(7.5px, -15px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+header {
+  z-index: 20;
+  position: absolute;
+}
+
+.header-content-container {
+  display: flex;
+  margin-left: 1rem;
+  margin-top: 1rem;
+}
+
+.header-item {
+  border: 1px solid #fff;
+  text-align: center;
+  padding: 0 2rem;
+  color: #fff !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 6rem;
+}
+
+.header-item p {
+  width: fit-content;
+  text-transform: uppercase;
+}
+
+.header-icon {
+  width: 100%;
+}
