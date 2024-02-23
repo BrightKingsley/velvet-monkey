@@ -6,8 +6,8 @@
   position: relative;
   height: 100vh;
   overflow: hidden;
-  /* background: url("https://assets.sibrata.com/images/codepen/tea-garden-unsplash.jpg")
-    no-repeat center center fixed; */
+  background: url("https://assets.sibrata.com/images/codepen/tea-garden-unsplash.jpg")
+    no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -23,7 +23,6 @@
   height: 100%;
   transform: translateY(50vh);
   opacity: 0;
-  background: url("/images/tea-fields.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -161,35 +160,34 @@ body {
   background-repeat: no-repeat;
   transition: transform 1.5s forwards linear !important;
   position: absolute;
-  /* background-color: red; */
 }
 
 #flake1 {
   background-image: url(https://un-po.co.in/i/1.png);
   top: 10%;
   left: 20%;
-  animation: flake1animation 5s infinite linear;
+  animation: flake1Animation 20s infinite forwards ease;
 }
 
 #flake2 {
   background-image: url(https://un-po.co.in/i/2.png);
   top: 10%;
   left: 80%;
-  animation: flake2animation 6s infinite linear;
+  animation: flake2Animation 20s infinite linear;
 }
 
 #flake3 {
   background-image: url(https://un-po.co.in/i/3.png);
   top: 80%;
   left: 80%;
-  animation: flake3animation 7s infinite linear;
+  animation: flake3Animation 20s infinite linear;
 }
 
 #flake4 {
   background-image: url(https://un-po.co.in/i/4.png);
   top: 80%;
   left: 20%;
-  animation: flake4animation 8s infinite linear;
+  animation: flake4Animation 20s infinite linear;
 }
 
 h1 {
@@ -202,66 +200,6 @@ h1 {
   text-transform: uppercase;
   opacity: 0.2;
   font-size: 70px;
-}
-
-@keyframes flake1Animation {
-  0% {
-    transform: translate(0, 0);
-  }
-  33% {
-    transform: translate(10px, 5px);
-  }
-  66% {
-    transform: translate(-5px, 10px);
-  }
-  100% {
-    transform: translate(0, 0);
-  }
-}
-
-@keyframes flake2Animation {
-  0% {
-    transform: translate(0, 0);
-  }
-  33% {
-    transform: translate(-8px, 4px);
-  }
-  66% {
-    transform: translate(4px, -8px);
-  }
-  100% {
-    transform: translate(0, 0);
-  }
-}
-
-@keyframes flake3Animation {
-  0% {
-    transform: translate(0, 0);
-  }
-  33% {
-    transform: translate(6px, -3px);
-  }
-  66% {
-    transform: translate(-3px, -6px);
-  }
-  100% {
-    transform: translate(0, 0);
-  }
-}
-
-@keyframes flake4Animation {
-  0% {
-    transform: translate(0, 0);
-  }
-  33% {
-    transform: translate(-15px, 7.5px);
-  }
-  66% {
-    transform: translate(7.5px, -15px);
-  }
-  100% {
-    transform: translate(0, 0);
-  }
 }
 
 header {
@@ -292,24 +230,20 @@ header {
   overflow: hidden;
   position: relative;
 }
-
 .header-item:nth-child(2),
 .header-item:nth-child(3) {
   display: none;
   width: 7rem;
 }
-
 .header-item:nth-child(1) {
   width: 0;
   padding: 0.4rem;
   animation: expand 0.7s forwards;
 }
-
 .header-item:nth-child(2):hover,
 .header-item:nth-child(3):hover {
   outline-color: #fff;
 }
-
 @media (min-width: 760px) {
   .header-item:nth-child(2),
   .header-item:nth-child(3) {
@@ -360,6 +294,76 @@ header {
   height: 0.5rem;
   bottom: 0;
   position: absolute;
+}
+
+/* ANIMATION */
+
+@keyframes flake1Animation {
+  25% {
+    transform: translate(0%, 20%);
+  }
+  66% {
+    transform: translate(20%, 20%);
+  }
+
+  75% {
+    transform: translate(20%, 0%);
+  }
+
+  100% {
+    transform: translate(0%, 0%);
+  }
+}
+
+@keyframes flake2Animation {
+  25% {
+    transform: translate(0%, -15%);
+  }
+  66% {
+    transform: translate(-15%, -15%);
+  }
+
+  75% {
+    transform: translate(-15%, 0%);
+  }
+
+  100% {
+    transform: translate(0%, 0%);
+  }
+}
+
+@keyframes flake3Animation {
+  25% {
+    transform: translate(0%, 40%);
+  }
+  66% {
+    transform: translate(40%, 40%);
+  }
+
+  75% {
+    transform: translate(40%, 0%);
+  }
+
+  100% {
+    transform: translate(0%, 0%);
+  }
+}
+
+@keyframes flake4Animation {
+  25% {
+    transform: translate(0%, -20%);
+  }
+  66% {
+    transform: translate(-20%, -20%);
+  }
+
+  75% {
+    transform: translate(-20%, 0%);
+  }
+
+  100% {
+    transform: translate(0%, 0%);
+  }
 }
 
 @keyframes switch {
